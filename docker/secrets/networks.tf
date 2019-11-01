@@ -3,3 +3,4 @@ resource "docker_network" "private_overlay_network" {
   driver   = "overlay"
   internal = true
 }
+

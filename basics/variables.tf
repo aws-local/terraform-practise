@@ -3,7 +3,7 @@ variable "env" {
 }
 
 variable "image_name" {
-  type        = "map"
+  type        = map(string)
   description = "Image name to run container from."
   default = {
     dev  = "ghost:latest"
@@ -12,7 +12,7 @@ variable "image_name" {
 }
 
 variable "container_name" {
-  type        = "map"
+  type        = map(string)
   description = "Name of the container"
   default = {
     dev  = "ghost_dev"
@@ -26,10 +26,11 @@ variable "int_port" {
 }
 
 variable "ext_port" {
-  type        = "map"
+  type        = map(string)
   description = "External port"
   default = {
     dev  = "8081"
     prod = "80"
   }
 }
+

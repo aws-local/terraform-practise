@@ -5,3 +5,4 @@ variable "mysql_root_password" {
 variable "mysql_db_password" {
   default = "cDRzU1dvUmQwIQo="
 }
+
