@@ -7,10 +7,10 @@ resource "docker_service" "ghost_service" {
 
       env = {
         database__client              = "mysql"
-        database__connection_host     = "${var.mysql_network_alias}"
-        database__connection_user     = "${var.ghost_db_username}"
-        database__connection_password = "${var.mysql_root_password}"
-        database__connection_database = "${var.ghost_db_name}"
+        database__connection__host     = "${var.mysql_network_alias}"
+        database__connection__user     = "${var.ghost_db_username}"
+        database__connection__password = "${var.mysql_root_password}"
+        database__connection__database = "${var.ghost_db_name}"
       }
     }
     networks = [
